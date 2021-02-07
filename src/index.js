@@ -7,5 +7,6 @@ for (i=0; i<matrix.length; i++) {
 for (j = 0; j < matrix[i].length; j++) {
 towelArr.push(arr[i][j])}
 }
+towelArr.sort(function(a, b) { return a - b; });
 return towelArr;
 };
