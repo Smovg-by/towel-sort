@@ -2,6 +2,13 @@
 // You should implement your task here.
 
 module.exports = function towelSort(matrix) {
-    let towelArr = [];
-    return towelArr.concat(...matrix);
-  };
+  if (!matrix) return [];
+  return matrix.reduce((acc, item, index) => {
+    if (index % 2 == 0) {
+      acc.push(...item);
+    } else {
+      acc.push(...item.reverse());
+    }
+    return acc;
+  }, []);
+};
